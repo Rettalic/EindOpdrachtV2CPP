@@ -20,7 +20,7 @@ int main()
     //Enemy
     int enemyAmount = 8;
 
-    //Soundmanager
+    //Sound manager
     Sound* sound = new Sound;
 
     //Player

@@ -8,23 +8,23 @@
 		<Option virtualFolders="CMake Files\;CMake Files\cmake_modules\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="GameEindOpdrachtv2">
-				<Option output="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/GameEindOpdrachtv2.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug"/>
+				<Option output="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/GameEindOpdrachtv2.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/headers"/>
+					<Add directory="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/headers"/>
 					<Add directory="C:/SFML/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
@@ -34,20 +34,20 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 GameEindOpdrachtv2"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 GameEindOpdrachtv2"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="GameEindOpdrachtv2/fast">
-				<Option output="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/GameEindOpdrachtv2.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug"/>
+				<Option output="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/GameEindOpdrachtv2.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/headers"/>
+					<Add directory="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/headers"/>
 					<Add directory="C:/SFML/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
@@ -57,88 +57,88 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 GameEindOpdrachtv2/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 GameEindOpdrachtv2/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Border.cpp">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Border.cpp">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Border.h">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Border.h">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Enemy.cpp">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Enemy.cpp">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Enemy.h">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Enemy.h">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Player.cpp">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Player.cpp">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Player.h">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Player.h">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Score.cpp">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Score.cpp">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Score.h">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Score.h">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Sound.cpp">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Sound.cpp">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Sound.h">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Sound.h">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Text.cpp">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Text.cpp">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Text.h">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Text.h">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/TimeClass.cpp">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/TimeClass.cpp">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/TimeClass.h">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/TimeClass.h">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Vector2.cpp">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Vector2.cpp">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/Vector2.h">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Vector2.h">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/main.cpp">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/main.cpp">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/CMakeLists.txt">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/cmake_modules/FindSFML.cmake">
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/cmake_modules/FindSFML.cmake">
 			<Option virtualFolder="CMake Files\cmake_modules\"/>
 		</Unit>
 	</Project>

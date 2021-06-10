@@ -1,1 +1,1 @@
--IC:/Users/Yannick/CLionProjects/GameEindOpdrachtv2/headers -IC:/SFML/include
+-I"C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/headers" -IC:/SFML/include

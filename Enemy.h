@@ -11,17 +11,17 @@ public:
     sf::CircleShape Draw(float dt);
     void BorderCheck();
     Vector2* position;
-    float sizeEnemy = 10.0f;
+    int sizeEnemy = 14;
 
 private:
     int windowWidth;
-    float posX = rand() % 1280;
-    float posY = -10;
+    float posX = rand() % 1280; // Waar spawn je de Enemies op de X as
+    float posY = -30;
 
-    float moveSpeed = rand() % 50;
-    float downSpeed = rand() % 50;
+    float moveSpeed = rand() % 75;
+    float downSpeed = rand() % 75;
 
-    int   minSpeed = 25;
+    int   minSpeed = 20;
 
     sf::CircleShape shape;
 };
