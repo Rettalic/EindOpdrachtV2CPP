@@ -16,18 +16,16 @@ int main()
     bool firstLoop = true;
 
     //Create window
-    int windowW = 1280;
-    int windowH = 920;
+    int windowWidth = 2048;
+    int windowHeight = 1080;
 
-    sf::RenderWindow window(sf::VideoMode(windowW, windowH), "Yeet");
-
-
+    sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Yeet");
 
     //Score
     Score* score = new Score;
-    Vector2 scoreTextPos (20, 10);
-    TextInput* scoreText = new TextInput("Score: 0", sf::Color::Yellow, 25, scoreTextPos);
-    int winScore = 14; //minus one
+    Vector2 scoreTextPos (windowWidth/25, windowHeight/30);
+    TextInput* scoreText = new TextInput("Score: 0", sf::Color::Yellow, windowWidth/65, scoreTextPos);
+    int winScore = 11; //minus one
 
     //End text
     Vector2 endTextPos (200, 300);
@@ -35,27 +33,29 @@ int main()
 
 
     Sound* soundMan = new Sound;
+    bool isPlaying = false;
 
     //Create player
-    Player* player = new Player(windowW, windowH);
+    Player* player = new Player(windowWidth, windowHeight);
 
     //Create enemy
     int enemiesNum = 5;
     std::vector<Enemy*> enimList;
     for (int i = 0; i < enemiesNum; ++i) {
-        Enemy* enemy = new Enemy(windowW);
+        Enemy* enemy = new Enemy(windowWidth);
         enimList.push_back(enemy);
     }
 
     //set deltatime
-    deltaTime->UpdateDT();
-    soundMan->Play("BackgroundMusic.wav");
+    deltaTime->UpdateDeltaTime();
 
+    soundMan->Play("BackgroundMusic.wav");
     //Game loop
     while (window.isOpen())
     {
         //Update deltatime
-        deltaTime->UpdateDT();
+        deltaTime->UpdateDeltaTime();
+
 
         //Check event
         sf::Event event;
@@ -74,7 +74,7 @@ int main()
             //Draw enemy
             window.draw(enimList[i]->Draw(deltaTime->dt));
             //Delete enemy under screen
-            if(enimList[i]->Draw(deltaTime->dt).getPosition().y > windowH + 5)
+            if(enimList[i]->Draw(deltaTime->dt).getPosition().y > windowHeight + 5)
             {
                 delete enimList[i];
                 enimList.erase(enimList.begin() + i);
@@ -90,18 +90,17 @@ int main()
             }
         }
 
+        //Print score
+        window.draw(scoreText->returnText("Score: " + std::to_string(score->GetScore())));
+
         //Player
         window.draw(player->Draw());
 
         //Add enemy
         while (enimList.size() < enemiesNum) {
-            Enemy* enemy = new Enemy(windowW);
+            Enemy* enemy = new Enemy(windowWidth);
             enimList.push_back(enemy);
         }
-
-
-        //Print score
-        window.draw(scoreText->returnText("Score: " + std::to_string(score->GetScore())));
 
         //Win
         if(score->GetScore() > winScore)
@@ -112,6 +111,16 @@ int main()
             _sleep(2000);
             window.close();
         }
+
+        if(score->GetScore() <= loseScore)
+        {
+            window.clear();
+            window.draw(endText->returnText("You win!.. For now! :)"));
+            window.display();
+            _sleep(2000);
+            window.close();
+        }
+
         //Display window and clear it
         window.display();
         window.clear();

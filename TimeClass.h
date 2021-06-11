@@ -3,9 +3,11 @@
 
 class TimeClass {
 public:
-    float dt;
-    sf::Clock clock;
     TimeClass();
     ~TimeClass();
-    void UpdateDT();
+
+    float deltaTime;
+    sf::Clock clock;
+
+    void UpdateDeltaTime();
 };

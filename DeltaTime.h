@@ -10,5 +10,5 @@ public:
     DeltaTime();
     ~DeltaTime();
 
-    void UpdateDeTi();
+    void UpdateDeltaTime();
 };

@@ -16,6 +16,7 @@ public:
     float frictionCoef = 1;
     float mass = 1;
     int enimSize = 16;
+    float shiftSpeed;
 
 private:
     int wW;

@@ -3,6 +3,6 @@
 DeltaTime::DeltaTime()  { }
 DeltaTime::~DeltaTime() { }
 
-void DeltaTime::UpdateDeTi() {
+void DeltaTime::UpdateDeltaTime() {
     dt = clock.restart().asSeconds();
 }

@@ -8,6 +8,6 @@ TimeClass::~TimeClass() {
 
 }
 
-void TimeClass::UpdateDT() {
-    dt = clock.restart().asSeconds();
+void TimeClass::UpdateDeltaTime() {
+    deltaTime = clock.restart().asSeconds();
 }

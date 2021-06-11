@@ -1,7 +1,7 @@
 #include "Player.h"
 
-Player::Player(int windowW, int windowH) {
-    wW = windowW;
+Player::Player(int windowWidth, int windowH) {
+    wW = windowWidth;
     wH = windowH;
     posY = wH - bottemPos;
     position = new Vector2(posX, posY);
@@ -15,12 +15,28 @@ void Player::Move(float dt) {
     float acceleration = 0;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
-        acceleration += moveSpeed * dt;
+        acceleration += moveSpeed * dt * extraSpeed;
     }
+
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
-        acceleration += -moveSpeed * dt;
+        acceleration += -moveSpeed * dt * extraSpeed;
     }
+
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+        velocity = 0;
+        acceleration = 0;
+    }
+
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::LShift)){
+    extraSpeed = 3.0;
+
+    }
+    else{
+     extraSpeed = 1.0;
+    }
+
+
     //velocity = (1/drag coefficient) * (e^-dragC/m*ΔT)*(dragC*velocity+mass*a)-(mass*a/dragC)
     velocity = (1/frictionCoef) * (std::pow(2.71828,-frictionCoef/mass*dt))*(frictionCoef*velocity+mass*acceleration)-(mass*acceleration/frictionCoef);
     Vector2* move = new Vector2(velocity,0);
