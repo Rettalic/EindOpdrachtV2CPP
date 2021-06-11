@@ -168,6 +168,33 @@ Border.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEindOpdrachtv2.dir\build.make CMakeFiles/GameEindOpdrachtv2.dir/Border.cpp.s
 .PHONY : Border.cpp.s
 
+DeltaTime.obj: DeltaTime.cpp.obj
+
+.PHONY : DeltaTime.obj
+
+# target to build an object file
+DeltaTime.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEindOpdrachtv2.dir\build.make CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.obj
+.PHONY : DeltaTime.cpp.obj
+
+DeltaTime.i: DeltaTime.cpp.i
+
+.PHONY : DeltaTime.i
+
+# target to preprocess a source file
+DeltaTime.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEindOpdrachtv2.dir\build.make CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.i
+.PHONY : DeltaTime.cpp.i
+
+DeltaTime.s: DeltaTime.cpp.s
+
+.PHONY : DeltaTime.s
+
+# target to generate assembly for a file
+DeltaTime.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEindOpdrachtv2.dir\build.make CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.s
+.PHONY : DeltaTime.cpp.s
+
 Enemy.obj: Enemy.cpp.obj
 
 .PHONY : Enemy.obj
@@ -384,6 +411,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEindOpdrachtv2.dir\build.make CMakeFiles/GameEindOpdrachtv2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+stb_image.obj: stb_image.cpp.obj
+
+.PHONY : stb_image.obj
+
+# target to build an object file
+stb_image.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEindOpdrachtv2.dir\build.make CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.obj
+.PHONY : stb_image.cpp.obj
+
+stb_image.i: stb_image.cpp.i
+
+.PHONY : stb_image.i
+
+# target to preprocess a source file
+stb_image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEindOpdrachtv2.dir\build.make CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.i
+.PHONY : stb_image.cpp.i
+
+stb_image.s: stb_image.cpp.s
+
+.PHONY : stb_image.s
+
+# target to generate assembly for a file
+stb_image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEindOpdrachtv2.dir\build.make CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.s
+.PHONY : stb_image.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -396,6 +450,9 @@ help:
 	@echo ... Border.obj
 	@echo ... Border.i
 	@echo ... Border.s
+	@echo ... DeltaTime.obj
+	@echo ... DeltaTime.i
+	@echo ... DeltaTime.s
 	@echo ... Enemy.obj
 	@echo ... Enemy.i
 	@echo ... Enemy.s
@@ -420,6 +477,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... stb_image.obj
+	@echo ... stb_image.i
+	@echo ... stb_image.s
 .PHONY : help
 
 

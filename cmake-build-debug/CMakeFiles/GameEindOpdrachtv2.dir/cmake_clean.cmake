@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GameEindOpdrachtv2.dir/Border.cpp.obj"
+  "CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.obj"
   "CMakeFiles/GameEindOpdrachtv2.dir/Enemy.cpp.obj"
   "CMakeFiles/GameEindOpdrachtv2.dir/Player.cpp.obj"
   "CMakeFiles/GameEindOpdrachtv2.dir/Score.cpp.obj"
@@ -8,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameEindOpdrachtv2.dir/TimeClass.cpp.obj"
   "CMakeFiles/GameEindOpdrachtv2.dir/Vector2.cpp.obj"
   "CMakeFiles/GameEindOpdrachtv2.dir/main.cpp.obj"
+  "CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.obj"
   "GameEindOpdrachtv2.exe"
   "GameEindOpdrachtv2.exe.manifest"
   "GameEindOpdrachtv2.pdb"

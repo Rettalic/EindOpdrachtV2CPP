@@ -1,7 +1,8 @@
 #include "Enemy.h"
 
 Enemy::Enemy(int windowW) {
-    windowWidth = windowW;
+    wW = windowW;
+    position = new Vector2(posX, posY);
 }
 
 Enemy::~Enemy() {
@@ -9,36 +10,43 @@ Enemy::~Enemy() {
 }
 
 void Enemy::Move(float dt) {
-    if (downSpeed <= minSpeed)
+    float accelerationX = 0;
+    float accelerationY = 0;
+    if (fallSpeed <= minSpeed)
     {
-        downSpeed = rand() % 50;
+        fallSpeed = rand() % 50;
     }
     if (moveSpeed == 0)
     {
         moveSpeed = rand() % 50;
     }
-
-    posY += downSpeed * dt;
-    posX += moveSpeed * dt;
-    position = new Vector2(posX, posY);
+    accelerationX += moveSpeed * dt;
+    accelerationY += fallSpeed * dt;
+    velocityX = moveSpeed;
+    velocityY = fallSpeed;
+    Vector2* move = new Vector2(velocityX,-velocityY);
+    *position = *position + *move;
+    BorderCheck();
+    //std::cout<<"cry"<<velocityX<<std::endl;
 }
 
 sf::CircleShape Enemy::Draw(float dt) {
     Move(dt);
-    sf::CircleShape shape(sizeEnemy);
+    sf::CircleShape shape(enimSize);
     shape.setFillColor(sf::Color::Red);
-    BorderCheck();
-    shape.setPosition(posX, posY);
+    shape.setPosition(position->GetX(), position->GetY());
     return shape;
 }
 
 void Enemy::BorderCheck() {
-    if (posX > windowWidth)
+    if (position->GetX() > wW)
     {
+        velocityX = velocityX *-1;
         moveSpeed = moveSpeed *-1;
     }
-    if (posX < 0.f)
+    if (position->GetX() < 0.f)
     {
+        velocityX = velocityX *-1;
         moveSpeed = moveSpeed *-1;
     }
 }

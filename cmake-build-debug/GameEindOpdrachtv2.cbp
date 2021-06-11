@@ -90,6 +90,12 @@
 		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Border.h">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/DeltaTime.cpp">
+			<Option target="GameEindOpdrachtv2"/>
+		</Unit>
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/DeltaTime.h">
+			<Option target="GameEindOpdrachtv2"/>
+		</Unit>
 		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Enemy.cpp">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
@@ -133,6 +139,12 @@
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
 		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/main.cpp">
+			<Option target="GameEindOpdrachtv2"/>
+		</Unit>
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/stb_image.cpp">
+			<Option target="GameEindOpdrachtv2"/>
+		</Unit>
+		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/stb_image.h">
 			<Option target="GameEindOpdrachtv2"/>
 		</Unit>
 		<Unit filename="C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/CMakeLists.txt">

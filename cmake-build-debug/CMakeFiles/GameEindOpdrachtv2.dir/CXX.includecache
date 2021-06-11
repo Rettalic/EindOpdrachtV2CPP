@@ -857,10 +857,12 @@ C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Border.h
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Border.h
 SFML/Graphics.hpp
 -
+Player.h
+C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Player.h
 
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Enemy.cpp
-Enemy.h
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Enemy.h
+C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/DeltaTime.h
+SFML/Graphics.hpp
+-
 
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Enemy.h
 SFML/Graphics.hpp
@@ -879,20 +881,12 @@ SFML/Graphics.hpp
 -
 iostream
 -
-time.h
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/time.h
 Vector2.h
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Vector2.h
-
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Score.cpp
-Score.h
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Score.h
+time.h
+C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/time.h
 
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Score.h
-
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Sound.cpp
-Sound.h
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Sound.h
 
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Sound.h
 SFML/Audio.hpp
@@ -900,27 +894,11 @@ SFML/Audio.hpp
 string
 -
 
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Text.cpp
-Text.h
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Text.h
-
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Text.h
 string
 -
 SFML/Graphics.hpp
 -
-Vector2.h
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Vector2.h
-
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/TimeClass.cpp
-TimeClass.h
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/TimeClass.h
-
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/TimeClass.h
-SFML/Graphics.hpp
--
-
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Vector2.cpp
 Vector2.h
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Vector2.h
 
@@ -937,8 +915,8 @@ Player.h
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Player.h
 Enemy.h
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Enemy.h
-TimeClass.h
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/TimeClass.h
+DeltaTime.h
+C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/DeltaTime.h
 Sound.h
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Sound.h
 vector
@@ -947,6 +925,4 @@ Score.h
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Score.h
 Text.h
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Text.h
-Border.h
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Border.h
 

@@ -1,25 +1,47 @@
 #include "Player.h"
 
-Player::Player(int windowWidth, int windowHeight) {
-    wW = windowWidth;
-    wH = windowHeight;
+Player::Player(int windowW, int windowH) {
+    wW = windowW;
+    wH = windowH;
+    posY = wH - bottemPos;
+    position = new Vector2(posX, posY);
 }
 
 Player::~Player() {
 
 }
 
-void Player::Move(float dt, float destination) {
-    float distance = destination - posX;
-    float acceleration = distance/moveSpeed;
-    posX += acceleration;
-    posY = wH - bottomPos;
-    position = new Vector2(posX, posY);
+void Player::Move(float dt) {
+    float acceleration;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+    {
+        acceleration += moveSpeed * dt;
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+    {
+        acceleration += -moveSpeed * dt;
+    }
+    //velocity = (1/drag coefficient) * (e^-dragC/m*ΔT)*(dragC*velocity+mass*a)-(mass*a/dragC)
+    velocity =(std::pow(2.71828,-1))*(velocity+mass*acceleration)-(mass*acceleration);
+    Vector2* move = new Vector2(velocity,0);
+    *position = *position + *move;
+    borderCheck();
 }
 
 sf::CircleShape Player::Draw() {
     sf::CircleShape shape(playerSize);
-    shape.setFillColor(sf::Color::Cyan);
-    shape.setPosition(posX, posY);
+    shape.setFillColor(sf::Color::Green);
+    shape.setPosition(position->GetX(), position->GetY());
     return shape;
+}
+
+void Player::borderCheck() {
+    if (position->GetX() > wW)
+    {
+        *position = *position + *new Vector2(-wW, 0);
+    }
+    if (position->GetX() < (0.f - playerSize * 2))
+    {
+        *position = *position + *new Vector2(wW, 0);
+    }
 }

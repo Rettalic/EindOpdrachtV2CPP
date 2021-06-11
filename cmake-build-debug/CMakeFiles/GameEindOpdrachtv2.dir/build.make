@@ -201,6 +201,34 @@ CMakeFiles/GameEindOpdrachtv2.dir/Border.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEindOpdrachtv2.dir/Border.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Yannick\Documents\Project Vrij\EindOpdrachtV2CPP\Border.cpp" -o CMakeFiles\GameEindOpdrachtv2.dir\Border.cpp.s
 
+CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.obj: CMakeFiles/GameEindOpdrachtv2.dir/flags.make
+CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.obj: CMakeFiles/GameEindOpdrachtv2.dir/includes_CXX.rsp
+CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.obj: ../stb_image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Yannick\Documents\Project Vrij\EindOpdrachtV2CPP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GameEindOpdrachtv2.dir\stb_image.cpp.obj -c "C:\Users\Yannick\Documents\Project Vrij\EindOpdrachtV2CPP\stb_image.cpp"
+
+CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Yannick\Documents\Project Vrij\EindOpdrachtV2CPP\stb_image.cpp" > CMakeFiles\GameEindOpdrachtv2.dir\stb_image.cpp.i
+
+CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Yannick\Documents\Project Vrij\EindOpdrachtV2CPP\stb_image.cpp" -o CMakeFiles\GameEindOpdrachtv2.dir\stb_image.cpp.s
+
+CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.obj: CMakeFiles/GameEindOpdrachtv2.dir/flags.make
+CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.obj: CMakeFiles/GameEindOpdrachtv2.dir/includes_CXX.rsp
+CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.obj: ../DeltaTime.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Yannick\Documents\Project Vrij\EindOpdrachtV2CPP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GameEindOpdrachtv2.dir\DeltaTime.cpp.obj -c "C:\Users\Yannick\Documents\Project Vrij\EindOpdrachtV2CPP\DeltaTime.cpp"
+
+CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Yannick\Documents\Project Vrij\EindOpdrachtV2CPP\DeltaTime.cpp" > CMakeFiles\GameEindOpdrachtv2.dir\DeltaTime.cpp.i
+
+CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Yannick\Documents\Project Vrij\EindOpdrachtV2CPP\DeltaTime.cpp" -o CMakeFiles\GameEindOpdrachtv2.dir\DeltaTime.cpp.s
+
 # Object files for target GameEindOpdrachtv2
 GameEindOpdrachtv2_OBJECTS = \
 "CMakeFiles/GameEindOpdrachtv2.dir/main.cpp.obj" \
@@ -211,7 +239,9 @@ GameEindOpdrachtv2_OBJECTS = \
 "CMakeFiles/GameEindOpdrachtv2.dir/Sound.cpp.obj" \
 "CMakeFiles/GameEindOpdrachtv2.dir/TimeClass.cpp.obj" \
 "CMakeFiles/GameEindOpdrachtv2.dir/Text.cpp.obj" \
-"CMakeFiles/GameEindOpdrachtv2.dir/Border.cpp.obj"
+"CMakeFiles/GameEindOpdrachtv2.dir/Border.cpp.obj" \
+"CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.obj" \
+"CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.obj"
 
 # External object files for target GameEindOpdrachtv2
 GameEindOpdrachtv2_EXTERNAL_OBJECTS =
@@ -225,6 +255,8 @@ GameEindOpdrachtv2.exe: CMakeFiles/GameEindOpdrachtv2.dir/Sound.cpp.obj
 GameEindOpdrachtv2.exe: CMakeFiles/GameEindOpdrachtv2.dir/TimeClass.cpp.obj
 GameEindOpdrachtv2.exe: CMakeFiles/GameEindOpdrachtv2.dir/Text.cpp.obj
 GameEindOpdrachtv2.exe: CMakeFiles/GameEindOpdrachtv2.dir/Border.cpp.obj
+GameEindOpdrachtv2.exe: CMakeFiles/GameEindOpdrachtv2.dir/stb_image.cpp.obj
+GameEindOpdrachtv2.exe: CMakeFiles/GameEindOpdrachtv2.dir/DeltaTime.cpp.obj
 GameEindOpdrachtv2.exe: CMakeFiles/GameEindOpdrachtv2.dir/build.make
 GameEindOpdrachtv2.exe: C:/SFML/lib/libsfml-system-d.a
 GameEindOpdrachtv2.exe: C:/SFML/lib/libsfml-window-d.a
@@ -234,7 +266,7 @@ GameEindOpdrachtv2.exe: C:/SFML/lib/libsfml-audio-d.a
 GameEindOpdrachtv2.exe: CMakeFiles/GameEindOpdrachtv2.dir/linklibs.rsp
 GameEindOpdrachtv2.exe: CMakeFiles/GameEindOpdrachtv2.dir/objects1.rsp
 GameEindOpdrachtv2.exe: CMakeFiles/GameEindOpdrachtv2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Yannick\Documents\Project Vrij\EindOpdrachtV2CPP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable GameEindOpdrachtv2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Yannick\Documents\Project Vrij\EindOpdrachtV2CPP\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable GameEindOpdrachtv2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\GameEindOpdrachtv2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

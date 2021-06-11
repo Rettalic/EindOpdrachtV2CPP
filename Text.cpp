@@ -1,10 +1,10 @@
 #include "Text.h"
 
-Text::Text(std::string text, sf::Color color, int fontSize, Vector2 position)
+TextInput::TextInput(std::string text, sf::Color color, int fontSize, Vector2 position)
 {
-    sf::Text inputText;
-    sf::Font font;
-    font.loadFromFile("../Font/Starjhol.ttf");
+    inputText = sf::Text();
+    font = sf::Font();
+    font.loadFromFile("../textures/ARCADE_I.ttf");
     inputText.setString(text);
     inputText.setFont(font);
     inputText.setCharacterSize(fontSize);
@@ -12,11 +12,12 @@ Text::Text(std::string text, sf::Color color, int fontSize, Vector2 position)
     inputText.setPosition(position.GetX(), position.GetY());
 }
 
-Text::~Text() {
+TextInput::~TextInput() {
 
 }
 
-sf::Text Text::returnText() {
+sf::Text TextInput::returnText(std::string text) {
+    inputText.setString(text);
     sf::Text returnText = inputText;
     return returnText;
 }

@@ -1,52 +1,57 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include "Player.h"
-//#include "Vector2.h"
 #include "Enemy.h"
-#include "TimeClass.h"
+#include "DeltaTime.h"
 #include "Sound.h"
 #include <vector>
 #include "Score.h"
 #include "Text.h"
-#include "Border.h"
 
 int main()
 {
-    //Window
-    int windowX = 1280 ;
-    int windowY = 940;
-    sf::RenderWindow window(sf::VideoMode(windowX, windowY), "Cool Game");
+    //Time.deltaTime
+    DeltaTime* deltaTime = new DeltaTime();
+    bool firstLoop = true;
 
-    //Enemy
-    int enemyAmount = 8;
-
-    //Sound manager
-    Sound* sound = new Sound;
-
-    //Player
-    Player* player = new Player(windowX, windowY);
-
-    //Time
-    TimeClass* deltaTime = new TimeClass();
-
-    //Enemy
-    std::vector<Enemy*> enimList;
-    for (int i = 0; i < enemyAmount; ++i) {
-        Enemy* enemy = new Enemy(windowX);
-        enimList.push_back(enemy);
-    }
+    //Create window
+    int windowW = 1280;
+    int windowH = 920;
+    int enimNumber = 5;
+    int winScore = 14; //minus one
+    sf::RenderWindow window(sf::VideoMode(windowW, windowH), "Yeet");
 
     //Score
     Score* score = new Score;
-    Vector2 scoreTextPos (100, 250);
-    sf::Text scoreText;
-    Text* changeText = new Text("", sf::Color::Yellow, 500, scoreTextPos);
-    scoreText = changeText->returnText();
+    Vector2 scoreTextPos (20, 10);
+    TextInput* scoreText = new TextInput("Score: 0", sf::Color::Yellow, 25, scoreTextPos);
+
+    //End text
+    Vector2 endTextPos (200, 300);
+    TextInput* endText = new TextInput("You win!", sf::Color::Yellow, 50, endTextPos);
+
+    //Create Soundmanager
+    Sound* sm = new Sound;
+
+    //Create player
+    Player* player = new Player(windowW, windowH);
+
+    //Create enemy
+    std::vector<Enemy*> enimList;
+    for (int i = 0; i < enimNumber; ++i) {
+        Enemy* enemy = new Enemy(windowW);
+        enimList.push_back(enemy);
+    }
+
+    //set deltatime
+    deltaTime->UpdateDT();
 
     //Game loop
     while (window.isOpen())
     {
+        //Update deltatime
         deltaTime->UpdateDT();
+        //Check event
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -56,47 +61,56 @@ int main()
                 window.close();
             }
         }
-
         //Player input
-        float dest = sf::Mouse::getPosition(window).x;
-        player->Move(deltaTime->dt, dest);
+        player->Move(deltaTime->dt);
         //Enemy loop
         for (int i = 0; i < enimList.size(); ++i) {
+            //Draw enemy
             window.draw(enimList[i]->Draw(deltaTime->dt));
             //Delete enemy under screen
-            if(enimList[i]->Draw(deltaTime->dt).getPosition().y > windowY + 5)
+            if(enimList[i]->Draw(deltaTime->dt).getPosition().y > windowH + 5)
             {
                 delete enimList[i];
                 enimList.erase(enimList.begin() + i);
+                sm->Play("yoda.wav");
                 score->RetractScore(1);
             }
             //Collision with player
-            if (player->position->Distance(*enimList[i]->position, player->playerSize, enimList[i]->sizeEnemy) < 0){
+            if (player->position->Distance(*enimList[i]->position, player->playerSize, enimList[i]->enimSize) < 0){
                 delete enimList[i];
                 enimList.erase(enimList.begin() + i);
+                sm->Play("oof.wav");
                 score->AddScore(1);
-                enemyAmount += 1;
             }
         }
-
-
         //Add new enemies
-        while (enimList.size() < enemyAmount) {
-            Enemy* enemy = new Enemy(windowX);
+        while (enimList.size() < enimNumber) {
+            Enemy* enemy = new Enemy(windowW);
             enimList.push_back(enemy);
         }
-
         //Draw player
         window.draw(player->Draw());
-
-        //Print score and add to difficulty
-        window.draw(scoreText);
-
+        //Print score
+        window.draw(scoreText->returnText("Score: " + std::to_string(score->GetScore())));
+        //Win
+        if(score->GetScore() > winScore)
+        {
+            window.clear();
+            window.draw(endText->returnText("You win!"));
+            window.display();
+            _sleep(5000);
+            window.close();
+        }
         //Display window and clear it
         window.display();
         window.clear();
-
     }
-
+    //Delete everything
+    delete player;
+    delete deltaTime;
+    delete score;
+    //delete endText;
+   // delete scoreText;
+    delete sm;
     return 0;
 }

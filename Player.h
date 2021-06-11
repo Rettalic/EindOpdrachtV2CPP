@@ -1,27 +1,27 @@
 #pragma  once
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include "time.h"
 #include "Vector2.h"
+#include "time.h"
+
 
 class Player {
 public:
-    Player(int windowWidth, int windowHeight);
+    Player(int windowW, int windowH);
     ~Player();
-
-    void Move(float dt, float destination);
+    void Move(float dt);
+    void borderCheck();
     sf::CircleShape Draw();
     Vector2* position;
-    int playerSize = 20;
+    float velocity;
+    int playerSize = 30;
 
 private:
-    float posX = 200;
-    float posY = 800;
-    float bottomPos = 50;
-    float moveSpeed = 500;
+    float posX = 1280/2;
+    float posY = 100;
+    float bottemPos = 50;
+    float moveSpeed = 800;
     sf::CircleShape shape;
     int wW;
     int wH;
 };
-
-

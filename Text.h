@@ -3,10 +3,12 @@
 #include <SFML/Graphics.hpp>
 #include "Vector2.h"
 
-class Text {
+
+class TextInput {
 public:
-    Text(std::string text, sf::Color color, int fontSize, Vector2 position);
-    ~Text();
-    sf::Text returnText();
+    TextInput(std::string text, sf::Color color, int fontSize, Vector2 position);
+    ~TextInput();
+    sf::Text returnText(std::string text);
     sf::Text inputText;
+    sf::Font font;
 };

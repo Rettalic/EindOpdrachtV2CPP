@@ -3,7 +3,7 @@ project(GameEindOpdrachtv2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(GameEindOpdrachtv2 main.cpp Vector2.cpp Vector2.h Enemy.cpp Enemy.h Player.cpp Player.h Score.cpp Score.h Sound.cpp Sound.h TimeClass.cpp TimeClass.h Text.cpp Text.h Border.cpp Border.h)
+add_executable(GameEindOpdrachtv2 main.cpp Vector2.cpp Vector2.h Enemy.cpp Enemy.h Player.cpp Player.h Score.cpp Score.h Sound.cpp Sound.h TimeClass.cpp TimeClass.h Text.cpp Text.h Border.cpp Border.h stb_image.cpp stb_image.h DeltaTime.cpp DeltaTime.h)
 
 include_directories(headers C:/SFML/include)
 set(SFML_ROOT c:/SFML)
