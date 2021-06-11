@@ -7,6 +7,7 @@
 #include <vector>
 #include "Score.h"
 #include "Text.h"
+#include <windows.h>
 
 int main()
 {
@@ -17,40 +18,50 @@ int main()
     //Create window
     int windowW = 1280;
     int windowH = 920;
-    int enimNumber = 5;
-    int winScore = 14; //minus one
+
     sf::RenderWindow window(sf::VideoMode(windowW, windowH), "Yeet");
+
+
 
     //Score
     Score* score = new Score;
     Vector2 scoreTextPos (20, 10);
     TextInput* scoreText = new TextInput("Score: 0", sf::Color::Yellow, 25, scoreTextPos);
+    int winScore = 14; //minus one
 
     //End text
     Vector2 endTextPos (200, 300);
     TextInput* endText = new TextInput("You win!", sf::Color::Yellow, 50, endTextPos);
 
-    //Create Soundmanager
-    Sound* sm = new Sound;
+
+    Sound* soundMan = new Sound;
 
     //Create player
     Player* player = new Player(windowW, windowH);
 
     //Create enemy
+    int enemiesNum = 5;
     std::vector<Enemy*> enimList;
-    for (int i = 0; i < enimNumber; ++i) {
+    for (int i = 0; i < enemiesNum; ++i) {
         Enemy* enemy = new Enemy(windowW);
         enimList.push_back(enemy);
     }
 
     //set deltatime
     deltaTime->UpdateDT();
+    soundMan->Play("BackgroundMusic.wav");
 
     //Game loop
     while (window.isOpen())
     {
         //Update deltatime
         deltaTime->UpdateDT();
+
+        if(firstLoop == false){
+            Sleep(2000);
+            firstLoop = true;
+
+        }
         //Check event
         sf::Event event;
         while (window.pollEvent(event))
@@ -72,45 +83,51 @@ int main()
             {
                 delete enimList[i];
                 enimList.erase(enimList.begin() + i);
-                sm->Play("yoda.wav");
+                soundMan->Play("fail.wav");
                 score->RetractScore(1);
             }
             //Collision with player
             if (player->position->Distance(*enimList[i]->position, player->playerSize, enimList[i]->enimSize) < 0){
                 delete enimList[i];
                 enimList.erase(enimList.begin() + i);
-                sm->Play("oof.wav");
+                soundMan->Play("score.wav");
                 score->AddScore(1);
             }
         }
-        //Add new enemies
-        while (enimList.size() < enimNumber) {
+
+        //Player
+        window.draw(player->Draw());
+
+        //Add enemy
+        while (enimList.size() < enemiesNum) {
             Enemy* enemy = new Enemy(windowW);
             enimList.push_back(enemy);
         }
-        //Draw player
-        window.draw(player->Draw());
+
+
         //Print score
         window.draw(scoreText->returnText("Score: " + std::to_string(score->GetScore())));
+
         //Win
         if(score->GetScore() > winScore)
         {
             window.clear();
-            window.draw(endText->returnText("You win!"));
+            window.draw(endText->returnText("You win!.. For now! :)"));
             window.display();
-            _sleep(5000);
+            _sleep(2000);
             window.close();
         }
         //Display window and clear it
         window.display();
         window.clear();
     }
+
     //Delete everything
     delete player;
     delete deltaTime;
     delete score;
-    //delete endText;
-   // delete scoreText;
-    delete sm;
+    delete endText;
+    delete soundMan;
+    delete scoreText;
     return 0;
 }

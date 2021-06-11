@@ -12,7 +12,7 @@ Player::~Player() {
 }
 
 void Player::Move(float dt) {
-    float acceleration;
+    float acceleration = 0;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
         acceleration += moveSpeed * dt;
@@ -22,7 +22,7 @@ void Player::Move(float dt) {
         acceleration += -moveSpeed * dt;
     }
     //velocity = (1/drag coefficient) * (e^-dragC/m*ΔT)*(dragC*velocity+mass*a)-(mass*a/dragC)
-    velocity =(std::pow(2.71828,-1))*(velocity+mass*acceleration)-(mass*acceleration);
+    velocity = (1/frictionCoef) * (std::pow(2.71828,-frictionCoef/mass*dt))*(frictionCoef*velocity+mass*acceleration)-(mass*acceleration/frictionCoef);
     Vector2* move = new Vector2(velocity,0);
     *position = *position + *move;
     borderCheck();

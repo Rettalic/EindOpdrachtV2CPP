@@ -850,19 +850,13 @@ SFML/Config.hpp
 
 C:/SFML/include/SFML/Window/WindowStyle.hpp
 
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Border.cpp
-Border.h
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Border.h
-
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Border.h
-SFML/Graphics.hpp
--
-Player.h
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Player.h
-
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/DeltaTime.h
 SFML/Graphics.hpp
 -
+
+C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Enemy.cpp
+Enemy.h
+C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Enemy.h
 
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Enemy.h
 SFML/Graphics.hpp
@@ -871,10 +865,6 @@ iostream
 -
 Vector2.h
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Vector2.h
-
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Player.cpp
-Player.h
-C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Player.h
 
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Player.h
 SFML/Graphics.hpp
@@ -925,4 +915,6 @@ Score.h
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Score.h
 Text.h
 C:/Users/Yannick/Documents/Project Vrij/EindOpdrachtV2CPP/Text.h
+windows.h
+-
 

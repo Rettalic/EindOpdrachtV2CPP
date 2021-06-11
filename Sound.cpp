@@ -9,7 +9,7 @@ Sound::~Sound() {
 }
 
 void Sound::Play(std::string filename) {
-    buffer.loadFromFile("../Sounds/" + filename);
+    buffer.loadFromFile("../textures/" + filename);
     sound.setBuffer(buffer);
     sound.play();
 }

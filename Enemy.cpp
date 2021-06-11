@@ -22,12 +22,12 @@ void Enemy::Move(float dt) {
     }
     accelerationX += moveSpeed * dt;
     accelerationY += fallSpeed * dt;
-    velocityX = moveSpeed;
-    velocityY = fallSpeed;
+    velocityX =std::pow(2.71828,-frictionCoef/mass*dt)*(frictionCoef*velocityX+mass*accelerationX)-(mass*accelerationX/frictionCoef);
+    velocityY =(std::pow(2.71828,-frictionCoef/mass*dt))*(frictionCoef*velocityY+mass*accelerationY)-(mass*accelerationY/frictionCoef);
     Vector2* move = new Vector2(velocityX,-velocityY);
     *position = *position + *move;
     BorderCheck();
-    //std::cout<<"cry"<<velocityX<<std::endl;
+
 }
 
 sf::CircleShape Enemy::Draw(float dt) {

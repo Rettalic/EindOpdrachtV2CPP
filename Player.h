@@ -14,6 +14,8 @@ public:
     sf::CircleShape Draw();
     Vector2* position;
     float velocity;
+    float frictionCoef = 0.6;
+    float mass = 1;
     int playerSize = 30;
 
 private:
