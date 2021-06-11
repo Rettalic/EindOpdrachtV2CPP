@@ -3,7 +3,7 @@
 TextInput::TextInput(std::string text, sf::Color color, int fontSize, Vector2 position)
 {
     font = sf::Font();
-    font.loadFromFile("../textures/ARCADE_I.ttf");
+    font.loadFromFile("../textures/ARCADE_I.ttf"); //load file van project, specifieke map
     inputText = sf::Text();
 
     inputText.setString(text);

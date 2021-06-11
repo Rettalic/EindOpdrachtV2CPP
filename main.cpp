@@ -9,38 +9,35 @@
 #include "Score.h"
 #include "Text.h"
 
-
 int main()
 {
-    //Time.deltaTime
-    DeltaTime* deltaTime = new DeltaTime();
-    bool firstLoop = true;
+    //"-----" is een titel
 
-    //Create window
+    //-----Time.deltaTime-----
+    DeltaTime* deltaTime = new DeltaTime();
+    bool firstLoop = false;
+
+    //-----Create window size-----
     int windowWidth = 2048;
     int windowHeight = 1080;
+    sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Cool game"); //SFML library
 
-    sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Yeet");
-
-    //Score
+    //-----Score-----
     Score* score = new Score;
-    Vector2 scoreTextPos (windowWidth/25, windowHeight/30);
-    TextInput* scoreText = new TextInput("Score: 0", sf::Color::Yellow, windowWidth/65, scoreTextPos);
-    int winScore = 11; //minus one
+    Vector2 scoreTextPos (windowWidth/25, windowHeight/30); //pos die "scalable" is
+    TextInput* scoreText = new TextInput("Score: 0", sf::Color::Yellow, windowWidth/65, scoreTextPos); //creër score
+    int winScore = 10; //minus one
     int loseScore = -10;
 
-    //End text
-    Vector2 endTextPos (windowWidth / 8 - 70, windowHeight /3);
-    TextInput* endText = new TextInput("You win!", sf::Color::Yellow, 50, endTextPos);
 
-
+    //-----Sound-----
     Sound* soundMan = new Sound;
-    bool isPlaying = false;
+    soundMan->Play("BackgroundMusic.wav");
 
-    //Create player
+    //-----Create player-----
     Player* player = new Player(windowWidth, windowHeight);
 
-    //Create enemy
+    //-----Create enemy-----
     int enemiesNum = 10;
     std::vector<Enemy*> enimList;
     for (int i = 0; i < enemiesNum; ++i) {
@@ -48,18 +45,27 @@ int main()
         enimList.push_back(enemy);
     }
 
-    //set deltatime
+    //-----set deltatime-----
     deltaTime->UpdateDeltaTime();
 
-    soundMan->Play("BackgroundMusic.wav");
-    //Game loop
+    //-----End Game Text-----
+    Vector2 endTextPos (windowWidth / 8 - 70, windowHeight /3); //
+    TextInput* endText = new TextInput("", sf::Color::Yellow, 50, endTextPos);
+
+    //-----Game loop-----
     while (window.isOpen())
     {
+        if(firstLoop == false) {
+            window.draw(endText->returnText("Catch the droids!"));
+            firstLoop = true;
+            _sleep(500);
+        }
+        window.clear();
         //Update deltatime
         deltaTime->UpdateDeltaTime();
 
 
-        //Check event
+        //-----Check event-----
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -69,9 +75,10 @@ int main()
                 window.close();
             }
         }
-        //Player input
+        //-----Player input-----
         player->Move(deltaTime->dt);
-        //Enemy loop
+
+        //-----Enemy loop-----
         for (int i = 0; i < enimList.size(); ++i) {
             //Draw enemy
             window.draw(enimList[i]->Draw(deltaTime->dt));
@@ -92,44 +99,46 @@ int main()
             }
         }
 
-        //Print score
+        //-----Print score-----
         window.draw(scoreText->returnText("Score: " + std::to_string(score->GetScore())));
 
-        //Player
+        //-----Draw Player-----
         window.draw(player->Draw());
 
-        //Add enemy
+        //-----Add enemies-----
         while (enimList.size() < enemiesNum) {
             Enemy* enemy = new Enemy(windowWidth);
             enimList.push_back(enemy);
         }
 
-        //Win
+        //-----Check Win-----
         if(score->GetScore() > winScore)
         {
             window.clear();
-            window.draw(endText->returnText("You win!.. For now! :)"));
+            window.draw(endText->returnText("You win!.. For now! ;>"));
             window.display();
             _sleep(2000);
             window.close();
         }
 
+        //-----Check Lose-----
         if(score->GetScore() <= loseScore)
         {
             window.clear();
             window.draw(endText->returnText("You lost, better luck next time! :)"));
+            soundMan->Play("lose.wav");
             _sleep(500);
             window.display();
             _sleep(6000);
             window.close();
         }
 
-        //Display window and clear it
+        //-----Display window and clear it-----
         window.display();
         window.clear();
     }
 
-    //Delete everything
+    //-----Garbage collection-----
     delete player;
     delete deltaTime;
     delete score;

@@ -14,7 +14,6 @@ public:
     float velocityX;
     float velocityY;
     int enimSize = 16;
-    float shiftSpeed;
 
 private:
     int wW;
