@@ -1,13 +1,8 @@
 #include "DeltaTime.h"
 
-DeltaTime::DeltaTime() {
+DeltaTime::DeltaTime()  { }
+DeltaTime::~DeltaTime() { }
 
-}
-
-DeltaTime::~DeltaTime() {
-
-}
-
-void DeltaTime::UpdateDT() {
+void DeltaTime::UpdateDeTi() {
     dt = clock.restart().asSeconds();
 }

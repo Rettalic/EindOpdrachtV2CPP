@@ -2,13 +2,14 @@
 
 TextInput::TextInput(std::string text, sf::Color color, int fontSize, Vector2 position)
 {
-    inputText = sf::Text();
     font = sf::Font();
     font.loadFromFile("../textures/ARCADE_I.ttf");
+    inputText = sf::Text();
+
     inputText.setString(text);
     inputText.setFont(font);
-    inputText.setCharacterSize(fontSize);
     inputText.setFillColor(color);
+    inputText.setCharacterSize(fontSize);
     inputText.setPosition(position.GetX(), position.GetY());
 }
 

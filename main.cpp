@@ -57,11 +57,6 @@ int main()
         //Update deltatime
         deltaTime->UpdateDT();
 
-        if(firstLoop == false){
-            Sleep(2000);
-            firstLoop = true;
-
-        }
         //Check event
         sf::Event event;
         while (window.pollEvent(event))

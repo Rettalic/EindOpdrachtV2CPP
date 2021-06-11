@@ -6,7 +6,9 @@ class DeltaTime {
 public:
     float dt;
     sf::Clock clock;
+
     DeltaTime();
     ~DeltaTime();
-    void UpdateDT();
+
+    void UpdateDeTi();
 };
