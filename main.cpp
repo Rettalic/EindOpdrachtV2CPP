@@ -15,7 +15,6 @@ int main()
 
     //-----Time.deltaTime-----
     DeltaTime* deltaTime = new DeltaTime();
-    bool firstLoop = false;
 
     //-----Create window size-----
     int windowWidth = 2048;
@@ -25,8 +24,8 @@ int main()
     //-----Score-----
     Score* score = new Score;
     Vector2 scoreTextPos (windowWidth/25, windowHeight/30); //pos die "scalable" is
-    TextInput* scoreText = new TextInput("Score: 0", sf::Color::Yellow, windowWidth/65, scoreTextPos); //creër score
-    int winScore = 10; //minus one
+    TextInput* scoreText = new TextInput("Score: 0", sf::Color::Magenta, windowWidth/65, scoreTextPos); //creër score
+    int winScore = 9; //winScore + one = totaal behalen
     int loseScore = -10;
 
 
@@ -45,22 +44,18 @@ int main()
         enimList.push_back(enemy);
     }
 
-    //-----set deltatime-----
+    //-----set delta time-----
     deltaTime->UpdateDeltaTime();
 
     //-----End Game Text-----
     Vector2 endTextPos (windowWidth / 8 - 70, windowHeight /3); //
-    TextInput* endText = new TextInput("", sf::Color::Yellow, 50, endTextPos);
+    TextInput* endText = new TextInput("", sf::Color::Magenta, 50, endTextPos);
 
     //-----Game loop-----
     while (window.isOpen())
     {
-        if(firstLoop == false) {
-            window.draw(endText->returnText("Catch the droids!"));
-            firstLoop = true;
-            _sleep(500);
-        }
         window.clear();
+
         //Update deltatime
         deltaTime->UpdateDeltaTime();
 
@@ -117,7 +112,7 @@ int main()
             window.clear();
             window.draw(endText->returnText("You win!.. For now! ;>"));
             window.display();
-            _sleep(2000);
+            Sleep(2000);
             window.close();
         }
 
@@ -127,9 +122,9 @@ int main()
             window.clear();
             window.draw(endText->returnText("You lost, better luck next time! :)"));
             soundMan->Play("lose.wav");
-            _sleep(500);
+            Sleep(500);
             window.display();
-            _sleep(6000);
+            Sleep(6000);
             window.close();
         }
 

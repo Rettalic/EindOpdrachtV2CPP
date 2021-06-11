@@ -1,12 +1,8 @@
 #include "Score.h"
 
-Score::Score() {
+Score::Score() { }
 
-}
-
-Score::~Score() {
-
-}
+Score::~Score() { }
 
 void Score::AddScore(int point) {
     points += point;

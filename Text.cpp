@@ -13,9 +13,7 @@ TextInput::TextInput(std::string text, sf::Color color, int fontSize, Vector2 po
     inputText.setPosition(position.GetX(), position.GetY());
 }
 
-TextInput::~TextInput() {
-
-}
+TextInput::~TextInput() { }
 
 sf::Text TextInput::returnText(std::string text) {
     inputText.setString(text);

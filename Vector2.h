@@ -1,6 +1,9 @@
 #pragma once
 #include <cmath>
 
+
+
+
 class Vector2 {
 public:
     Vector2(float Bx, float By);

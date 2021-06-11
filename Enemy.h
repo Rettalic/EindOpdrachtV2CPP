@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Vector2.h"
 
+
 class Enemy {
 public:
     Enemy(int windowW);
@@ -21,6 +22,5 @@ private:
     float posY = -10;
     float moveSpeed = (rand() % 25) * 0.002;
     float fallSpeed = (rand() % 25) * 0.002;
-    float minSpeed = 10;
     sf::CircleShape shape;
 };

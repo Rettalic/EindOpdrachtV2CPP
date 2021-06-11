@@ -5,9 +5,7 @@ Enemy::Enemy(int windowW) {
     position = new Vector2(posX, posY);
 }
 
-Enemy::~Enemy() {
-
-}
+Enemy::~Enemy() { }
 
 void Enemy::Move(float dt) {
     velocityX = moveSpeed;

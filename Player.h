@@ -4,7 +4,6 @@
 #include "Vector2.h"
 #include "time.h"
 
-
 class Player {
 public:
     Player(int windowW, int windowH);
@@ -19,7 +18,7 @@ public:
     float velocity;
     float friction = 0.6;
     float mass = 1;
-    float extraSpeed = 1.0;
+    float extraSpeed = 1.4;
     int playerSize = 30;
 
 private:

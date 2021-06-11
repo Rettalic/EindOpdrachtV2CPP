@@ -37,7 +37,7 @@ void Player::Move(float dt) {
     }
 
 
-   //Deze formule heb ik van Wridzer gekregen.
+   //Deze formule komt uit de les van Vincent
     velocity = (1/friction) * (std::pow(2.71828,-friction/mass*dt))*(friction*velocity+mass*acceleration)-(mass*acceleration/friction);
     Vector2* move = new Vector2(velocity,0);
     *position = *position + *move;
@@ -54,7 +54,7 @@ sf::CircleShape Player::Draw() {
 void Player::borderCheck() {
     if (position->GetX() > wW)
     {
-        *position = *position + *new Vector2(-wW, 0);
+        *position = *position + *new Vector2(-wW, 0); //brengt speler naar andere kant van scherm waardoor het lijkt alsof je teleporteerd
     }
     if (position->GetX() < (0.f - playerSize * 2))
     {
