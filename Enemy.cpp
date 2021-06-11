@@ -10,20 +10,8 @@ Enemy::~Enemy() {
 }
 
 void Enemy::Move(float dt) {
-    float accelerationX = 0;
-    float accelerationY = 0;
-    if (fallSpeed <= minSpeed)
-    {
-        fallSpeed = rand() % 50;
-    }
-    if (moveSpeed == 0)
-    {
-        moveSpeed = rand() % 50;
-    }
-    accelerationX += moveSpeed * dt;
-    accelerationY += fallSpeed * dt;
-    velocityX =std::pow(2.71828,-frictionCoef/mass*dt)*(frictionCoef*velocityX+mass*accelerationX)-(mass*accelerationX/frictionCoef);
-    velocityY =(std::pow(2.71828,-frictionCoef/mass*dt))*(frictionCoef*velocityY+mass*accelerationY)-(mass*accelerationY/frictionCoef);
+    velocityX = moveSpeed;
+    velocityY = -fallSpeed;
     Vector2* move = new Vector2(velocityX,-velocityY);
     *position = *position + *move;
     BorderCheck();

@@ -1,13 +1,14 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <vector>
+#include <windows.h>
 #include "Player.h"
 #include "Enemy.h"
 #include "DeltaTime.h"
 #include "Sound.h"
-#include <vector>
 #include "Score.h"
 #include "Text.h"
-#include <windows.h>
+
 
 int main()
 {
@@ -26,9 +27,10 @@ int main()
     Vector2 scoreTextPos (windowWidth/25, windowHeight/30);
     TextInput* scoreText = new TextInput("Score: 0", sf::Color::Yellow, windowWidth/65, scoreTextPos);
     int winScore = 11; //minus one
+    int loseScore = -10;
 
     //End text
-    Vector2 endTextPos (200, 300);
+    Vector2 endTextPos (windowWidth / 8 - 70, windowHeight /3);
     TextInput* endText = new TextInput("You win!", sf::Color::Yellow, 50, endTextPos);
 
 
@@ -39,7 +41,7 @@ int main()
     Player* player = new Player(windowWidth, windowHeight);
 
     //Create enemy
-    int enemiesNum = 5;
+    int enemiesNum = 10;
     std::vector<Enemy*> enimList;
     for (int i = 0; i < enemiesNum; ++i) {
         Enemy* enemy = new Enemy(windowWidth);
@@ -115,9 +117,10 @@ int main()
         if(score->GetScore() <= loseScore)
         {
             window.clear();
-            window.draw(endText->returnText("You win!.. For now! :)"));
+            window.draw(endText->returnText("You lost, better luck next time! :)"));
+            _sleep(500);
             window.display();
-            _sleep(2000);
+            _sleep(6000);
             window.close();
         }
 

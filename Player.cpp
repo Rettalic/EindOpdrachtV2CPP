@@ -3,7 +3,7 @@
 Player::Player(int windowWidth, int windowH) {
     wW = windowWidth;
     wH = windowH;
-    posY = wH - bottemPos;
+    posY = wH - bottomPos;
     position = new Vector2(posX, posY);
 }
 
@@ -37,8 +37,8 @@ void Player::Move(float dt) {
     }
 
 
-    //velocity = (1/drag coefficient) * (e^-dragC/m*ΔT)*(dragC*velocity+mass*a)-(mass*a/dragC)
-    velocity = (1/frictionCoef) * (std::pow(2.71828,-frictionCoef/mass*dt))*(frictionCoef*velocity+mass*acceleration)-(mass*acceleration/frictionCoef);
+   //Deze formule heb ik van Wridzer gekregen.
+    velocity = (1/friction) * (std::pow(2.71828,-friction/mass*dt))*(friction*velocity+mass*acceleration)-(mass*acceleration/friction);
     Vector2* move = new Vector2(velocity,0);
     *position = *position + *move;
     borderCheck();

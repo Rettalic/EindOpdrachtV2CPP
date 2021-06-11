@@ -13,17 +13,15 @@ public:
     Vector2* position;
     float velocityX;
     float velocityY;
-    float frictionCoef = 1;
-    float mass = 1;
     int enimSize = 16;
     float shiftSpeed;
 
 private:
     int wW;
     float posX = rand() % 1280;
-    float posY = -40;
-    float moveSpeed = rand() % 25;
-    float fallSpeed = rand() % 25;
+    float posY = -10;
+    float moveSpeed = (rand() % 25) * 0.002;
+    float fallSpeed = (rand() % 25) * 0.002;
     float minSpeed = 10;
     sf::CircleShape shape;
 };
